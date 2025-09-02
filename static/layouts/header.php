@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     
     <!-- Custom CSS-->
-    <link rel="stylesheet" href="/PROYECTO WEB I/static/css/styles.css">
+    <link rel="stylesheet" href="/PROYECTO-INGENIERIA-SOFTWARE-II/static/css/styles.css">
     
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
@@ -18,7 +18,7 @@
     
     <!-- Js -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="/PROYECTO WEB I/static/js/up_arrow.js"></script>    
+    <script src="/PROYECTO-INGENIERIA-SOFTWARE-II/static/js/up_arrow.js"></script>    
 </head>
 
 <body>

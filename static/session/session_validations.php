@@ -50,7 +50,7 @@ switch ($sessiontype){
     case 'index': //Página de inicio       
         session_start();           
         if(isset($_SESSION['id'])){            
-            if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
+            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
 
                 if ($_SESSION['role'] == 'Administrador') {
                     $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
