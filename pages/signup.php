@@ -42,6 +42,6 @@ include_once("../static/layouts/header.php");
         <textarea type="text" class="form-control" style="height:125px" id="reviewsignup" name="reviewsignup" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
-    <input type="button" value="Cancelar" onclick="window.location.href='/PROYECTO WEB I/index.php'" class="btn btn-primary">
+    <input type="button" value="Cancelar" onclick="window.location.href='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'" class="btn btn-primary">
 </form>
 <?php include_once("../static/layouts/footer.php") ?>

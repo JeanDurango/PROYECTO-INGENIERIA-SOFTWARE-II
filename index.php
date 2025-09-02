@@ -1,7 +1,7 @@
 <?php include_once("static/layouts/header.php");?>
 <h1 class="espaciotitulos">Bienvenido</h1>
 <?php
-    include_once '../PROYECTO WEB I/database/models/IndexApartmentModel.php';    
+    include_once '../PROYECTO-INGENIERIA-SOFTWARE-II/database/models/IndexApartmentModel.php';    
     $apartmentModel = new ApartmentModel();            
     $apartments = $apartmentModel -> getApartmentsForIndex();
     while($row = mysqli_fetch_assoc($apartments)){

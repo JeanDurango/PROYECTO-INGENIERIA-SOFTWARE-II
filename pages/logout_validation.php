@@ -12,5 +12,5 @@
     //con ayuda de session_validations.php
     $_SESSION['id']=0;
     echo "<script>alert('Ha cerrado sesión correctamente');
-              window.location='/PROYECTO WEB I/index.php'</script>";    
+              window.location='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'</script>";    
 ?>

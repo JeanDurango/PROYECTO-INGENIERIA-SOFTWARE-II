@@ -24,12 +24,12 @@
 <body>
     <?php   
     // Validaciones para el tipo de sesión y botones a mostrar
-    if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
+    if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
         $sessiontype='index';
-        include_once '../PROYECTO WEB I/static/session/session_validations.php';        
+        include_once '../PROYECTO-INGENIERIA-SOFTWARE-II/static/session/session_validations.php';        
     }
     else{
-        if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'){
+        if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'){
             $sessiontype='index';            
             include_once '../static/session/session_validations.php';
             }
@@ -43,10 +43,10 @@
     <nav class="navbar sticky-top navbar-dark bg-dark">
         <div class="container-fluid">
             <div class="">
-                <a class="navbar-brand bungeecss" href="/PROYECTO WEB I/index.php"><img class="iconlogo" src="/PROYECTO WEB I/images/iconlogo.png" alt="">WEROOMMATES</a>
+                <a class="navbar-brand bungeecss" href="/PROYECTO-INGENIERIA-SOFTWARE-II/index.php"><img class="iconlogo" src="/PROYECTO-INGENIERIA-SOFTWARE-II/images/iconlogo.png" alt="">WEROOMMATES</a>
             </div>            
             <div class="d-md-flex">
-                <a type='button' href='/PROYECTO WEB I/index.php' class='btn btn-outline-primary home'>Inicio</a>
+                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php' class='btn btn-outline-primary home'>Inicio</a>
                 <?php
                     echo ($loginlogoutbutton);
                 ?>

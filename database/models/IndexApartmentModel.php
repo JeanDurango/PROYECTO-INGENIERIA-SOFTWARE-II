@@ -1,5 +1,5 @@
 <?php
-include_once '../PROYECTO WEB I/database/DBConnection.php';
+include_once '../PROYECTO-INGENIERIA-SOFTWARE-II/database/DBConnection.php';
 class ApartmentModel
 { //Crea los campos de los apartamentos registrados
     private $db = NULL;

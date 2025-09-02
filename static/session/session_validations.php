@@ -10,21 +10,21 @@ switch ($sessiontype){
             exit;
         }
         else{
-            if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
-                $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
+            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
+                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
             }
             else{
                 if ($_SESSION['role'] == 'Administrador') {
                     
                     
-                $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";            
+                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";            
             }
             else{
-                $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
+                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
            }             
         }
         }
@@ -37,13 +37,13 @@ switch ($sessiontype){
             exit;
         }
         else{
-            if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
-                $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
+            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
+                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
             }
             else{
-                $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
+                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
             }
         }
     break;
@@ -53,19 +53,19 @@ switch ($sessiontype){
             if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
 
                 if ($_SESSION['role'] == 'Administrador') {
-                    $loginlogoutbutton = "<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                    <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                    <a type='button' href='/PROYECTO WEB I/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
+                    $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
+                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
+                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
                 }
                 else {
-                    $loginlogoutbutton = "<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                                    <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
+                    $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
+                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
                 }    
             }            
         }
         else{
-            $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                <a type='button' href='/PROYECTO WEB I/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
+            $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
+                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
         }
     break;
     case 'Administrador': //Página Solicitudes de Admin
@@ -75,22 +75,22 @@ switch ($sessiontype){
             header ("Location: {$pageToRedirect}");
             exit;
         }
- 
-        if($_SERVER['PHP_SELF']=='/PROYECTO WEB I/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO WEB I/index.php'){
+
+        if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
 
             if ($_SESSION['role'] == 'Administrador') {
-                $loginlogoutbutton = "<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                <a type='button' href='/PROYECTO WEB I/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
+                $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
+                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
+                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
             }
             else {
-                $loginlogoutbutton = "<a type='button' href='/PROYECTO WEB I/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                                <a type='button' href='/PROYECTO WEB I/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
+                $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
+                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
             }    
         }        
         else{
-            $loginlogoutbutton="<a type='button' href='/PROYECTO WEB I/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                <a type='button' href='/PROYECTO WEB I/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
+            $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
+                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
         }
 
 }
