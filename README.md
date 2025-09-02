@@ -25,6 +25,7 @@ Para la instalación de la aplicación siga los siguientes pasos, entendiendo qu
 4.  Clone el repositorio desde GITHUB:
     https://github.com/jhoalex2525/PROYECTO-WEB-I.git
 5.  Abra en el navegador de su preferencia la ruta:
-    http://localhost/PROYECTO%20WEB%20I
-6.  Disfrute la aplicación.
+    http://localhost/rutadelarchivo
+    
+7.  Disfrute la aplicación.
 
