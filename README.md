@@ -23,7 +23,7 @@ Para la instalación de la aplicación siga los siguientes pasos, entendiendo qu
     https://www.apachefriends.org/es/index.html 
 3.  Ejecute XAMPP Y ejecute Apache y MySQL.
 4.  Clone el repositorio desde GITHUB:
-    https://github.com/jhoalex2525/PROYECTO-WEB-I.git
+    https://github.com/JeanDurango/PROYECTO-INGENIERIA-SOFTWARE-II.git
 5.  Abra en el navegador de su preferencia la ruta:
     http://localhost/rutadelarchivo
     
