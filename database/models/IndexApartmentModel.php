@@ -15,7 +15,7 @@ class ApartmentModel
             echo "Falló la conexión a MySQL de apartamentos";
             exit();
         }
-        //consultar todos los registros de la bd
+        //consultar todos los registros de la bds
         
         else {            
             $sql = "SELECT * FROM apartmentdata";            
