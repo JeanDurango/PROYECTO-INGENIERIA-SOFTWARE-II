@@ -13,6 +13,7 @@ include_once("../static/layouts/header.php");
     $apartmentModel = new ApartmentModel();            
     $apartments = $apartmentModel -> getApartments($email);    
     while($row = mysqli_fetch_assoc($apartments)){
+    // Componente visual de apartamento con botones de acción y calendario para reserva
     $template = "
     <div class='row listapartment'>
         <div class='col-md-6 mb-3 picturetype1align'>
@@ -27,7 +28,7 @@ include_once("../static/layouts/header.php");
             <form>
                 <div class='mb-3'>
                     <label class='form-label'>Número de habitaciones</label>
-                    <input type='text' class='form-control' id='numberadd' name='numberadd' selected disabled value='{$row['rooms']}''>
+                    <input type='text' class='form-control' id='numberadd' name='numberadd' selected disabled value='{$row['rooms']}'>
                 </div>
                 <div class='mb-3'>
                     <label class='form-label'>Valor noche</label>
@@ -37,11 +38,24 @@ include_once("../static/layouts/header.php");
                     <label class='form-label'>Reseña habitación</label>
                     <textarea type='text' class='form-control' style='height:125px' id='roomreviewadd' name='roomreviewadd' selected disabled>{$row['roomreview']}</textarea>
                 </div>
+                <!-- Calendario para seleccionar rango de fechas de reserva -->
+                <div class='mb-3'>
+                    <label class='form-label'>Fecha de inicio de reserva</label>
+                    <input type='date' class='form-control' name='start_date' required>
+                </div>
+                <div class='mb-3'>
+                    <label class='form-label'>Fecha de fin de reserva</label>
+                    <input type='date' class='form-control' name='end_date' required>
+                </div>
+                <!-- Botón para reservar el apartamento -->
+                <button type='submit' class='btn btn-success'>Reservar</button>
+                <!-- Botones de actualizar y eliminar -->
                 <a type='button' href='edit_apartment.php?id={$row['id']}' class='btn btn-primary'>Actualizar</a>                
                 <a type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#deletemodal{$row['id']}'>Eliminar</a>
             </form>
         </div>
     </div>    
+    <!-- Modal para confirmar eliminación de apartamento -->
     <div class='modal fade' id='deletemodal{$row['id']}' tabindex='-1' aria-labelledby='' aria-hidden='true'>
         <div class='modal-dialog'>
             <div class='modal-content'>
