@@ -48,7 +48,7 @@ include_once("../static/layouts/header.php");
                     <input type='date' class='form-control' name='end_date' required>
                 </div>
                 <!-- Botón para reservar el apartamento -->
-                <button type='submit' class='btn btn-success'>Reservar</button>
+    
                 <!-- Botones de actualizar y eliminar -->
                 <a type='button' href='edit_apartment.php?id={$row['id']}' class='btn btn-primary'>Actualizar</a>                
                 <a type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#deletemodal{$row['id']}'>Eliminar</a>
