@@ -38,16 +38,6 @@ include_once("../static/layouts/header.php");
                     <label class='form-label'>Reseña habitación</label>
                     <textarea type='text' class='form-control' style='height:125px' id='roomreviewadd' name='roomreviewadd' selected disabled>{$row['roomreview']}</textarea>
                 </div>
-                <!-- Calendario para seleccionar rango de fechas de reserva -->
-                <div class='mb-3'>
-                    <label class='form-label'>Fecha de inicio de reserva</label>
-                    <input type='date' class='form-control' name='start_date' required>
-                </div>
-                <div class='mb-3'>
-                    <label class='form-label'>Fecha de fin de reserva</label>
-                    <input type='date' class='form-control' name='end_date' required>
-                </div>
-                <!-- Botón para reservar el apartamento -->
     
                 <!-- Botones de actualizar y eliminar -->
                 <a type='button' href='edit_apartment.php?id={$row['id']}' class='btn btn-primary'>Actualizar</a>                
