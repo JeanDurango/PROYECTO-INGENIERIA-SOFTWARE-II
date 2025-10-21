@@ -1,97 +1,57 @@
 <?php
-//scrip php para identificar tipo de sesión y mostrar boton (login/logout/profile/signup) segun corresponda
+/**
+ * Script PHP para identificar tipo de sesión y validar acceso
+ * Archivo: static/session/session_validations.php
+ * 
+ * IMPORTANTE: No debe haber NINGÚN espacio o línea antes de <?php
+ * para evitar el error "headers already sent"
+ */
 
-switch ($sessiontype){
-    case 'all': //Hace referencia a sin importar el rol de quien está logueado
-        session_start();
-        if($_SESSION['id']<=0){
+switch ($sessiontype) {
+    case 'all': // Sin importar el rol de quien está logueado
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        if (!isset($_SESSION['id']) || $_SESSION['id'] <= 0) {
             $pageToRedirect = "login.php";
-            header ("Location: {$pageToRedirect}");
+            header("Location: {$pageToRedirect}");
             exit;
         }
-        else{
-            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
-                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
-            }
-            else{
-                if ($_SESSION['role'] == 'Administrador') {
-                    
-                    
-                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";            
-            }
-            else{
-                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
-           }             
+        break;
+
+    case 'anfitrion': // Solo para rol Anfitrión
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
-        }
-    break;
-    case 'anfitrion': //Hace referencia a rol Anfitrión
-        session_start();
-        if($_SESSION['role']!=='Anfitrión'){
+        if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'Anfitrión') {
             $pageToRedirect = "login.php";
-            header ("Location: {$pageToRedirect}");
+            header("Location: {$pageToRedirect}");
             exit;
         }
-        else{
-            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
-                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
-            }
-            else{
-                $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";            
-            }
-        }
-    break;
-    case 'index': //Página de inicio       
-        session_start();           
-        if(isset($_SESSION['id'])){            
-            if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
+        break;
 
-                if ($_SESSION['role'] == 'Administrador') {
-                    $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
-                }
-                else {
-                    $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                                    <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
-                }    
-            }            
+    case 'Administrador': // Solo para rol Administrador
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
-        else{
-            $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
-        }
-    break;
-    case 'Administrador': //Página Solicitudes de Admin
-        session_start();
-        if($_SESSION['role']!=='Administrador'){
+        if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'Administrador') {
             $pageToRedirect = "login.php";
-            header ("Location: {$pageToRedirect}");
+            header("Location: {$pageToRedirect}");
             exit;
         }
+        break;
 
-        if($_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php'||$_SERVER['PHP_SELF']=='/PROYECTO-INGENIERIA-SOFTWARE-II/index.php'){
-
-            if ($_SESSION['role'] == 'Administrador') {
-                $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>
-                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/adminlist.php' class='btn btn-outline-primary signup'>Solicitudes</a>";
-            }
-            else {
-                $loginlogoutbutton = "<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/profile.php' class='btn btn-outline-primary signup'>Perfil</a>                        
-                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/logout_validation.php' class='btn btn-outline-primary logout'>Logout</a>";
-            }    
-        }        
-        else{
-            $loginlogoutbutton="<a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/signup.php' class='btn btn-outline-primary signup'>Signup</a>
-                                <a type='button' href='/PROYECTO-INGENIERIA-SOFTWARE-II/pages/login.php' class='btn btn-outline-primary login'>Login</a>";            
+    case 'index': // Página de inicio (accesible para todos)
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
+        // No hay restricciones, todos pueden acceder
+        break;
 
+    default:
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        break;
 }
 ?>
